@@ -1,0 +1,41 @@
+.achiv-parallax{
+  width: 100vw;
+  height: 50vh;
+  background-image: url("../assets/7.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.achievements {
+    padding: 40px 20px;
+    text-align: center;   
+   
+  
+  }
+  .achievements h2
+  {   color: white;
+      
+      background-color: rgba(0, 0, 0, 0.3);
+     background-size: cover;}
+  
+  .achievement-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .achievement-card {
+    background-color: #2e2e2e;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  
+  .achievement-card:hover {
+    transform: scale(1.05);
+  }
+  

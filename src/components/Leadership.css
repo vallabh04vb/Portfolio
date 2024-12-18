@@ -1,0 +1,45 @@
+.leadership {
+  padding: 20px;
+}
+
+.leadership-header {
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.leadership-header:hover {
+  color: #42a5f5;
+}
+
+.leadership-timeline {
+  margin-top: 20px;
+  transition: max-height 0.4s ease;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  color: #1a237e;
+}
+
+.timeline-content .organization {
+  font-style: italic;
+  color: #555;
+}
+
+.timeline-content .duration {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.timeline-content ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}

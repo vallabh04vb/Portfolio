@@ -1,0 +1,124 @@
+/* General Projects Section Styles */
+.projects {
+  padding: 40px 20px;
+  text-align: center;
+  background-image: url("../assets/7.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.projects h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: max-content;
+  /* text-align: center !important;
+  align-items: center;
+  justify-content: center;
+  align-self: center; */
+  justify-self: center;
+  padding: 10px;
+  
+
+  
+}
+
+/* Card Container */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  /* background-color: white; */
+
+ 
+}
+
+/* Card Styles */
+.card {
+  width: 320px;
+  height: 300px;
+  /* border-radius: 4px; */
+  background-size: cover; /* Make the background image cover the entire card */
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease, background-size 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  /* border: 20px solid #000000; */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Zoom Effect on Hover */
+.card:hover {
+  background-size: 220%; /* Zoom in the background */
+  transform: scale(1.05); /* Slightly enlarge the card */
+}
+
+/* Content on Top of the Card */
+.card p {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  z-index: 1; /* Keep the text above the background image */
+  transition: all 0.3s ease;
+}
+
+.card:hover p {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker overlay on hover */
+}
+
+/* Title & Details */
+.card p span {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ff4c4c;
+  transition: all 0.3s ease;
+}
+
+.card p span.details {
+  font-size: 0.9rem;
+  color: #ffffff;
+  margin-top: 10px;
+  display: none;
+}
+
+.card p:hover span.details {
+  display: block;
+}
+
+.card p a {
+  color: #ff4c4c;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #ff4c4c;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.card p a:hover {
+  background-color: #ff4c4c;
+  color: #212121;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+/* Card Container */
+.projects-container {
+ 
+  overflow-y: scroll;
+  height: 100vh;
+}
+}
