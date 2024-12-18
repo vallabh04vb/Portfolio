@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import './HeroBanner.css';
 import profilePhoto from '../assets/vb_no_bg.png';
-import vb_pic from "../assets/vb_pic.jpg"
-import formalpic from '../assets/vb_formal.png';
+// import vb_pic from "../assets/vb_pic.jpg"
+// import formalpic from '../assets/vb_formal.png';
 
 const HeroBanner = () => {
   useEffect(() => {

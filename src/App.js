@@ -1,6 +1,5 @@
 // App.js
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
@@ -19,7 +18,7 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import animationData from './assets/bg.json';
 
 function App() {
-  const [backgroundImageUrl, setBackgroundImageUrl] = useState('');
+  // const [backgroundImageUrl, setBackgroundImageUrl] = useState('');
 
   useEffect(() => {
     AOS.init({ duration: 500, offset: 100, once: true });
