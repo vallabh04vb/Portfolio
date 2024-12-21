@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <a href="#hero" className="nav-logo">Unfold</a>
+        <a href="#hero" className="nav-logo">VB</a>
         <div className="hamburger" onClick={toggleMenu}>
           <span className="bar"></span>
           <span className="bar"></span>
@@ -19,7 +19,7 @@ const Navbar = () => {
         </div>
         <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
           <li><a href="#hero">Home</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#experience">Portfolio</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#skills">Skills</a></li>
