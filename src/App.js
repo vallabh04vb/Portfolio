@@ -13,7 +13,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 // import ExtraCurricular from './components/ExtraCurricular';
 import Contact from './components/Contact';
-import Carousel from './components/Carousel';
+// import Carousel from './components/Carousel';
 import { Player } from '@lottiefiles/react-lottie-player';
 import animationData from './assets/bg.json';
 import ExtraCurricular from './components/ExtraCurricular';
