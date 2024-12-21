@@ -16,6 +16,7 @@ import Contact from './components/Contact';
 import Carousel from './components/Carousel';
 import { Player } from '@lottiefiles/react-lottie-player';
 import animationData from './assets/bg.json';
+import ExtraCurricular from './components/ExtraCurricular';
 
 function App() {
   // const [backgroundImageUrl, setBackgroundImageUrl] = useState('');
@@ -72,7 +73,7 @@ function App() {
       {/* <ExtraCurricular />
        */}
       
-      <Carousel/>
+      <ExtraCurricular/>
       <Contact /> 
     </div>
     </div>

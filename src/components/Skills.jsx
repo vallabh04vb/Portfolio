@@ -1,69 +1,100 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './Skills.css';
 
 const skills = [
-  { name: "WordPress", percentage: 90 },
-  { name: "HTML/CSS", percentage: 99 },
-  { name: "jQuery", percentage: 95 },
-  { name: "Design", percentage: 100 },
+  {
+    category: "Frontend",
+    items: [
+      { name: "React.js", percentage: 90, icon: "💻" },
+      { name: "JavaScript", percentage: 85, icon: "🌟" },
+      { name: "HTML/CSS", percentage: 95, icon: "🎨" },
+      { name: "Next.js", percentage: 80, icon: "⚡" }
+    ]
+  },
+  {
+    category: "Backend",
+    items: [
+      { name: "Node.js", percentage: 85, icon: "🔧" },
+      { name: "Python", percentage: 80, icon: "🐍" },
+      { name: "MongoDB", percentage: 85, icon: "🗄️" },
+      { name: "Express.js", percentage: 80, icon: "🚀" }
+    ]
+  },
+  {
+    category: "AI/ML",
+    items: [
+      { name: "LLMs & NLP", percentage: 85, icon: "🤖" },
+      { name: "Neural Networks", percentage: 80, icon: "🧠" },
+      { name: "Deep Learning", percentage: 75, icon: "📊" },
+      { name: "Computer Vision", percentage: 80, icon: "👁️" }
+    ]
+  },
+  {
+    category: "Tools & Others",
+    items: [
+      { name: "Git", percentage: 90, icon: "📚" },
+      { name: "Docker", percentage: 75, icon: "🐳" },
+      { name: "AWS", percentage: 70, icon: "☁️" },
+      { name: "Firebase", percentage: 85, icon: "🔥" }
+    ]
+  }
 ];
 
 const Skills = () => {
   const [visible, setVisible] = useState(false);
+  const headingRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const section = document.querySelector('.skills');
-      const sectionTop = section.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animated");
+            entry.target.style.setProperty("--animation-trigger", "running");
+            setVisible(true);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
 
-      if (sectionTop < windowHeight - 70) {
-        setVisible(true);
-      }
-    };
+    if (headingRef.current) {
+      observer.observe(headingRef.current);
+    }
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => observer.disconnect();
   }, []);
 
   return (
     <section id="skills" className="skills">
-      <h2>My Skills</h2>
-      <div className="underline"></div>
+      <h2 ref={headingRef}>Technical Skills</h2>
       <div className="skills-container">
-        {skills.map((skill, idx) => (
-          <div className="skill-card" key={idx}>
-            <div className="skill-percentage">
-              <div className="number">
-                {visible ? (
-                  <DynamicCounter target={skill.percentage} />
-                ) : (
-                  0
-                )}
-              </div>
-              <span>%</span>
+        {skills.map((category, idx) => (
+          <div key={idx} className="skill-category">
+            <h3>{category.category}</h3>
+            <div className="skill-grid">
+              {category.items.map((skill, index) => (
+                <div className="skill-card" key={index}>
+                  <span className="skill-icon">{skill.icon}</span>
+                  <p className="skill-name">{skill.name}</p>
+                  <div className="skill-bar-container">
+                    <div 
+                      className="skill-bar" 
+                      style={{ 
+                        width: visible ? `${skill.percentage}%` : '0%'
+                      }}
+                    >
+                      <span className="percentage">{skill.percentage}%</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-            <p className="skill-name">{skill.name}</p>
           </div>
         ))}
       </div>
     </section>
   );
-};
-
-const DynamicCounter = ({ target }) => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (count < target) {
-      const interval = setInterval(() => {
-        setCount((prev) => Math.min(prev + 1, target));
-      }, 50); // Adjust speed of animation here
-      return () => clearInterval(interval);
-    }
-  }, [count, target]);
-
-  return <>{count}</>;
 };
 
 export default Skills;
