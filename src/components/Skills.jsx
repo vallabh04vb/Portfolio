@@ -8,13 +8,13 @@ const skills = [
       { name: "React.js", percentage: 90, icon: "💻" },
       // { name: "JavaScript", percentage: 85, icon: "🌟" },
       { name: "HTML/CSS/JS", percentage: 95, icon: "🎨" },
-      { name: "Bootstrap/Tailwind", percentage: 70, icon: "⚡" }
+      { name: "BS/Tailwind", percentage: 70, icon: "⚡" }
     ]
   },
   {
     category: "Backend",
     items: [
-      { name: "Node.js/Express.js", percentage: 85, icon: "🔧" },
+      { name: "Node/Express.js", percentage: 85, icon: "🔧" },
       { name: "Python/Django", percentage: 90, icon: "🐍" },
       { name: "MongoDB", percentage: 85, icon: "🗄️" },
       // { name: "Express.js", percentage: 80, icon: "🚀" }
