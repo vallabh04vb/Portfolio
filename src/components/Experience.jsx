@@ -37,14 +37,14 @@ const experiences = [
       "Mentored EshVision free web-dev program for 700+ students, providing learn & earn opportunities."
     ]
   },{
-    role: "Tech & Operations Head",
-    company: "Eshway | IIT Bombay Startup",
-    companyImage: require("../assets/eshway.jpeg"), // Add the image path here
-    duration: "Jan ’23 - Jun ’24",
+    role: "LLM Research Lead",
+    company: "CMINDS, IIT Bombay",
+    companyImage: require("../assets/eshway.jpeg"), // CMINDS IIT Bombay logo
+    duration: "April '24 - Jul '24",
     description: [
-      "Delivered 15+ diverse web & app development projects with MERN stack, overseeing end-to-end execution.",
-      "Successfully piloted 10+ projects, managed 5+ teams and 7+ freelancers, ensuring seamless digital service delivery.",
-      "Mentored EshVision free web-dev program for 700+ students, providing learn & earn opportunities."
+      "Received Certificate of Excellence for engineering an automated multimedia content creation pipeline increasing efficiency by 30%",
+      "Leveraged advanced AI technologies like Mistral, LLAMA 3, & Replicate/Groq GPUs for enhanced content engagement",
+      "Integrated web scraping, summarization, audio & video synthesis using NLP, BeautifulSoup, TTS & moviepy for production"
     ]
   }
   

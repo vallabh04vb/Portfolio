@@ -8,24 +8,63 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    closeMenu();
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <a href="#hero" className="nav-logo">VB</a>
-        <div className="hamburger" onClick={toggleMenu}>
+        <a href="#" className="nav-logo" onClick={(e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          closeMenu();
+        }}>
+          VB
+        </a>
+        <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
         </div>
         <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#experience">Portfolio</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#journal">Journal</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li style={{"--i": 1}}><a href="#" onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            closeMenu();
+          }}>Home</a></li>
+          <li style={{"--i": 2}}><a href="#about" onClick={(e) => {
+            e.preventDefault();
+            scrollToSection('about');
+          }}>About</a></li>
+          <li style={{"--i": 3}}><a href="#experience" onClick={(e) => {
+            e.preventDefault();
+            scrollToSection('experience');
+          }}>Experience</a></li>
+          <li style={{"--i": 4}}><a href="#projects" onClick={(e) => {
+            e.preventDefault();
+            scrollToSection('projects');
+          }}>Projects</a></li>
+          <li style={{"--i": 5}}><a href="#skills" onClick={(e) => {
+            e.preventDefault();
+            scrollToSection('skills');
+          }}>Skills</a></li>
+          <li style={{"--i": 6}}><a href="#extra" onClick={(e) => {
+            e.preventDefault();
+            scrollToSection('extra');
+          }}>ExtraCurricular</a></li>
+          <li style={{"--i": 7}}><a href="#contact" onClick={(e) => {
+            e.preventDefault();
+            scrollToSection('contact');
+          }}>Contact</a></li>
         </ul>
       </div>
     </nav>

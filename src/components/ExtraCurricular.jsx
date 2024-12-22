@@ -69,7 +69,7 @@ const ExtraCurricular = () => {
   }, []);
 
   return (
-    <section className="extra">
+    <section className="extra" id="extra">
       <h2 ref={headingRef}>ExtraCurricular</h2>
       <div className="carousel-container">
         <button className="carousel-button prev" onClick={prevSlide}>←</button>

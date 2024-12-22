@@ -3,7 +3,6 @@
 
 .skills {
   padding: 80px 20px;
-  /* background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)); */
   color: #fff;
   font-family: 'Poppins', sans-serif;
   text-align: center;
@@ -14,33 +13,16 @@
 
 /* Title Animation Styles */
 .skills h2 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 50px;
   color: transparent;
   position: relative;
   overflow: hidden;
   text-align: center;
+  font-family: 'Raleway', sans-serif;
   text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.6);
   z-index: 2;
   width: max-content;
-}
-
-.skills h2::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ff4c4c;
-  z-index: 1;
-  transform: translateX(-100%);
-  animation: slideInOut 1.5s ease forwards;
-  animation-play-state: var(--animation-trigger, paused);
-}
-
-.skills h2.animated {
-  animation: fadeInText 0.5s ease 0.5s forwards;
 }
 
 .skills-container {
@@ -56,6 +38,7 @@
   flex: 1;
   min-width: 300px;
   max-width: 450px;
+  margin-bottom: 30px;
 }
 
 .skill-category h3 {
@@ -122,49 +105,129 @@
   color: #ff4c4c;
 }
 
+/* Tablet Responsive */
 @media (max-width: 1024px) {
   .skill-category {
     min-width: 280px;
   }
+  
+  .skills-container {
+    padding: 0 20px;
+  }
 }
 
+/* Mobile Responsive */
 @media (max-width: 768px) {
+  .skills {
+    padding: 60px 15px;
+  }
+
   .skills h2 {
     font-size: 2.5rem;
+    margin-bottom: 30px;
+    width: auto;
+  }
+
+  .skills-container {
+    gap: 25px;
+    padding: 0 10px;
+  }
+
+  .skill-category {
+    min-width: 100%;
+    margin-bottom: 20px;
   }
 
   .skill-category h3 {
     font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
   }
 
   .skill-card {
     padding: 15px;
   }
 
+  .skill-icon {
+    font-size: 1.3rem;
+  }
+
   .skill-name {
     font-size: 1rem;
+    margin: 8px 0;
+  }
+
+  .skill-bar-container {
+    height: 6px;
   }
 }
 
+/* Small Mobile Responsive */
 @media (max-width: 480px) {
   .skills {
-    padding: 40px 15px;
+    padding: 40px 10px;
   }
 
   .skills h2 {
     font-size: 2rem;
   }
 
-  .skill-category {
-    min-width: 100%;
+  .skills-container {
+    gap: 20px;
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+  }
+
+  .skill-card {
+    padding: 12px;
   }
 
   .skill-icon {
     font-size: 1.2rem;
   }
+
+  .skill-name {
+    font-size: 0.9rem;
+  }
+
+  .percentage {
+    font-size: 0.7rem;
+    top: -20px;
+  }
 }
 
-/* Keep existing keyframes */
+/* Add the sliding red background animation */
+.skills h2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff4c4c;
+  z-index: 1;
+  transform: translateX(-100%);
+  animation: slideInOut 1.5s ease forwards;
+  animation-play-state: var(--animation-trigger, paused);
+}
+
+/* Animation classes */
+.skills h2.animated::before {
+  --animation-trigger: running;
+}
+
+.skills h2.animated {
+  animation: fadeInText 0.5s ease 0.5s forwards;
+}
+
+/* Add keyframes if not already present */
 @keyframes slideInOut {
   0% {
     transform: translateX(-100%);

@@ -6,36 +6,36 @@ const skills = [
     category: "Frontend",
     items: [
       { name: "React.js", percentage: 90, icon: "💻" },
-      { name: "JavaScript", percentage: 85, icon: "🌟" },
-      { name: "HTML/CSS", percentage: 95, icon: "🎨" },
-      { name: "Next.js", percentage: 80, icon: "⚡" }
+      // { name: "JavaScript", percentage: 85, icon: "🌟" },
+      { name: "HTML/CSS/JS", percentage: 95, icon: "🎨" },
+      { name: "Bootstrap/Tailwind", percentage: 70, icon: "⚡" }
     ]
   },
   {
     category: "Backend",
     items: [
-      { name: "Node.js", percentage: 85, icon: "🔧" },
-      { name: "Python", percentage: 80, icon: "🐍" },
+      { name: "Node.js/Express.js", percentage: 85, icon: "🔧" },
+      { name: "Python/Django", percentage: 90, icon: "🐍" },
       { name: "MongoDB", percentage: 85, icon: "🗄️" },
-      { name: "Express.js", percentage: 80, icon: "🚀" }
+      // { name: "Express.js", percentage: 80, icon: "🚀" }
     ]
   },
   {
     category: "AI/ML",
     items: [
-      { name: "LLMs & NLP", percentage: 85, icon: "🤖" },
-      { name: "Neural Networks", percentage: 80, icon: "🧠" },
-      { name: "Deep Learning", percentage: 75, icon: "📊" },
-      { name: "Computer Vision", percentage: 80, icon: "👁️" }
+      { name: "LLMs & NLP", percentage: 90, icon: "🤖" },
+      { name: "Neural Networks/DL", percentage: 80, icon: "🧠" },
+      // { name: "Deep Learning", percentage: 75, icon: "📊" },
+      { name: "Computer Vision", percentage: 75, icon: "👁️" }
     ]
   },
   {
     category: "Tools & Others",
     items: [
-      { name: "Git", percentage: 90, icon: "📚" },
-      { name: "Docker", percentage: 75, icon: "🐳" },
-      { name: "AWS", percentage: 70, icon: "☁️" },
-      { name: "Firebase", percentage: 85, icon: "🔥" }
+      { name: "Git/GitLab", percentage: 90, icon: "📚" },
+      { name: "Docker", percentage: 70, icon: "🐳" },
+      { name: "AWS", percentage: 80, icon: "☁️" },
+      // { name: "Firebase", percentage: 85, icon: "🔥" }
     ]
   }
 ];
