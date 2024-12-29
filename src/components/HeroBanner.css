@@ -275,6 +275,8 @@
     .hero-image img{
         width: 65vw;
     }
+    .hero-text{
+        top: -25vw;}
 }
 @media (max-width: 1200px){
     .hero-image img{
@@ -306,7 +308,7 @@
     .hero-text {
         text-align: center;
         margin: 0;
-        top: -50vw;
+        top: -30vw;
     }
     .hero-title{
         font-size: 8vw;
