@@ -7,14 +7,14 @@ const activities = [
     title: "Career Counseling",
     description: "Led career counseling campaigns impacting 5000+ students nationwide through workshops and mentoring sessions",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3",
-    link: "https://example.com/career",
+    link: "https://abhyudayiitb.org",
   },
   {
     id: 2,
     title: "YouTube Channel",
     description: "Creating educational content on tech, coding, and career guidance. 1000+ subscribers and growing community",
     image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3",
-    link: "https://youtube.com/@your-channel",
+    link: "https://www.youtube.com/@vallabhbehereiitb7568",
     isYoutube: true
   },
   {
@@ -22,14 +22,14 @@ const activities = [
     title: "AI Research",
     description: "Conducted research on LLMs and their applications in educational technology",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3",
-    link: "https://example.com/ai",
+    link: "https://drive.google.com/file/d/1KlRBOYOB8x2PhwjBY9MRT8GjKtHU7ip3/view?usp=sharing",
   },
   {
     id: 4,
     title: "Environmental Initiative",
     description: "Led beach cleanup drives and environmental awareness campaigns",
     image: "https://images.unsplash.com/photo-1618477202872-89cec6f8d62e?ixlib=rb-4.0.3",
-    link: "https://example.com/environment",
+    link: "https://abhyudayiitb.org",
   }
 ];
 

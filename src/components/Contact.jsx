@@ -42,16 +42,16 @@ const Contact = () => {
               send me a message or connect with me on social media!
             </p>
             <div className="social-media">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/vallabhvb/" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@vallabhbehereiitb7568" target="_blank" rel="noopener noreferrer">
                 <FaYoutube />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/vallabh_vb/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/Vallabh04vb" target="_blank" rel="noopener noreferrer">
                 <FaTwitter />
               </a>
             </div>

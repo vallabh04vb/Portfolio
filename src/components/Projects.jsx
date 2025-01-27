@@ -6,41 +6,48 @@ const projects = [
   {
     title: "E-commerce Website",
     description: "Full-stack MERN e-commerce platform with secure payments, user authentication, and admin dashboard. Generated $5K+ in revenue.",
-    link: "https://github.com/project1",
+    link: "https://github.com/vallabh04vb/ECOMMERCE-WEBSITE-ESHWAY-PROJECT.git",
     backgroundImage: "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3", // Temporary image URL
     tags: ["React", "Node.js", "MongoDB"]
   },
   {
     title: "College Representative Platform",
     description: "Scalable platform connecting 7000+ students nationwide. Features include real-time analytics, automated workflows, and reward system.",
-    link: "https://github.com/project2",
+    link: "https://github.com/vallabh04vb/CR-portal.git",
     backgroundImage: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3", // Temporary image URL
-    tags: ["React", "Firebase", "Analytics"]
+    tags: ["React", "Django", "AWS"]
   },
   {
-    title: "Portfolio Website",
-    description: "Modern portfolio website built with React, featuring smooth animations, responsive design, and optimized performance.",
-    link: "https://github.com/project3",
-    backgroundImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3", // Temporary image URL
+    title: "Abhyuday IITB Main Website",
+    description: "Built the official main website for Abhyuday IIT Bombay, the social body of IIT Bombay,showcasing various events and activities of the body",
+    link: "https://abhyudayiitb.org",
+    backgroundImage: require("../assets/aabhyuday.jpeg"), // Temporary image URL
     tags: ["React", "CSS", "JavaScript"]
   }, {
-    title: "Portfolio Website",
+    title: "TedxIITB Website",
     description: "Modern portfolio website built with React, featuring smooth animations, responsive design, and optimized performance.",
-    link: "https://github.com/project3",
-    backgroundImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3", // Temporary image URL
-    tags: ["React", "CSS", "JavaScript"]
+    link: "https://github.com/vallabh04vb/",
+    backgroundImage: require("../assets/final2.png"), // Temporary image URL
+    tags: ["React", "Tailwind", "Django"]
   }, {
-    title: "Portfolio Website",
-    description: "Modern portfolio website built with React, featuring smooth animations, responsive design, and optimized performance.",
-    link: "https://github.com/project3",
-    backgroundImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3", // Temporary image URL
+    title: "Competitions Portal",
+    description: "Developed and Deployed the portal for the competitions Abhyuday IIT Bombay, hosting more than 1000+ participants and 9+ competitions",
+    link: "https://competitions-iitb.onrender.com",
+    backgroundImage: require("../assets/comp.jpg"), // Temporary image URL
+    tags: ["React", "Djaango", "JavaScript"]
+  },
+  {
+    title: "Computer Vision Gesture Control",
+    description: "Developed a computer vision gesture control system using OpenCV and MediaPipe, allowing users to control media players with hand gestures.",
+    link: "https://github.com/vallabh04vb/Gesture-Control-System", 
+    backgroundImage: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3", // AI/ML workspace with hand gesture
     tags: ["React", "CSS", "JavaScript"]
   },
   {
-    title: "Portfolio Website",
-    description: "Modern portfolio website built with React, featuring smooth animations, responsive design, and optimized performance.",
-    link: "https://github.com/project3",
-    backgroundImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3", // Temporary image URL
+    title: "AI RAG based travel Chatbot",
+    description: "Developed the Rag system with LLMs for the travel chatbot, allowing users to ask questions about travel destinations and get personalized recommendations.",
+    link: "https://github.com/vallabh04vb/TRAVEL-CHAT-LLM.git",
+    backgroundImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3", // AI chatbot interface with travel elements
     tags: ["React", "CSS", "JavaScript"]
   }
 ];

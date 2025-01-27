@@ -39,7 +39,7 @@ const experiences = [
   },{
     role: "LLM Research Lead",
     company: "CMINDS, IIT Bombay",
-    companyImage: require("../assets/eshway.jpeg"), // CMINDS IIT Bombay logo
+    companyImage: require("../assets/cminds.jpeg"), // CMINDS IIT Bombay logo
     duration: "April '24 - Jul '24",
     description: [
       "Received Certificate of Excellence for engineering an automated multimedia content creation pipeline increasing efficiency by 30%",
