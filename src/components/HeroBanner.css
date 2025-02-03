@@ -359,3 +359,17 @@
         border-radius:0;
     }
 }
+@media (max-width: 500px){
+    .hero-image img{
+        /* width: 100vw; */
+        height: 186vw;
+        /* width: 120vw; */
+    }
+}
+@media (max-width: 440px){
+    .hero-image img{
+        /* width: 100vw; */
+        height: 188vw;
+        /* width: 120vw; */
+    }
+}
