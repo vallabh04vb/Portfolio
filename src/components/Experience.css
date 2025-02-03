@@ -141,14 +141,13 @@
   background-color: white;
   color: black;
   padding: 20px;
+  border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: start !important;
   position: relative;
   box-shadow: 0 5px 15px rgba(204, 204, 204, 0.8);
-  gap: 2px;
   width: 100%;
   max-width: 400px;
   min-height: 350px;
@@ -227,16 +226,15 @@
 
 /* Details Section */
 .experience-details {
-  margin-top: 15px;
+  margin: 15px 0;
   font-size: 1rem;
   line-height: 1.5;
-  align-self: start;
-  align-items: flex-start;
   text-align: left;
-  border: 1px solid black;
-  margin: 4px;
   padding: 10px;
   flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
 .experience-details ul {
@@ -250,16 +248,45 @@
 }
 
 .read-more {
-  background-color: white;
-  align-self: flex-start;
+  background-color: transparent;
+  color: #ff4c4c;
   padding: 8px 16px;
-  margin-top: 10px;
   border: 1px solid #ff4c4c;
   border-radius: 4px;
   cursor: pointer;
   position: absolute;
   bottom: 20px;
   left: 20px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.read-more:hover {
+  background-color: #ff4c4c;
+  color: white;
+}
+
+/* Add a gradient overlay to indicate more content */
+.experience-details::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(transparent, white);
+  pointer-events: none;
+}
+
+/* Expanded state */
+.experience-details.expanded {
+  max-height: none !important;
+}
+
+.experience-details.expanded::after {
+  display: none;
 }
 
 /* Responsive Styles */
@@ -310,13 +337,14 @@
   }
   .experience-details {
     font-size: 0.9rem;
-    margin-bottom: 40px; /* Space for read more button */
+    padding: 8px;
+    margin-bottom: 40px;
   }
   .read-more {
-    font-size: 0.9rem;
-    padding: 6px 12px;
     bottom: 15px;
     left: 15px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -332,7 +360,14 @@
   }
   .experience-details {
     font-size: 0.85rem;
+    padding: 6px;
     margin-bottom: 45px;
+  }
+  .read-more {
+    bottom: 12px;
+    left: 12px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
   }
 }
 

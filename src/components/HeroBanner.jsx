@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import './HeroBanner.css';
 import profilePhoto from '../assets/vb_no_bg.png';
+import vb_pic from "../assets/vb_pro.png"
 // import vb_pic from "../assets/vb_pic.jpg"
 // import formalpic from '../assets/vb_formal.png';
+
 
 const HeroBanner = () => {
   useEffect(() => {
@@ -28,7 +30,7 @@ const HeroBanner = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">Vallabh Suresh Behere</h1>
-            <p className="hero-subtitle">Full-Stack Developer & AI/ML Enthusiast at IIT Bombay</p>
+            <p className="hero-subtitle">Software Developer & AI/ML Enthusiast at IIT Bombay</p>
             <div className="scroll-down" onClick={handleScrollDown}>
               <span></span>
               <span></span>
@@ -36,7 +38,8 @@ const HeroBanner = () => {
             </div>
           </div>
           <div className="hero-image">
-            <img src={profilePhoto } alt="Vallabh Suresh Behere" />
+            <img src={vb_pic } alt="Vallabh Suresh Behere" />
+
 
 
           </div>

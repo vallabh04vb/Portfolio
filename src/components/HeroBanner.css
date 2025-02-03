@@ -184,27 +184,31 @@
 .hero-image {
     position: relative;
     z-index: -1;
-    top: 13vw;
+    top: 10vw;
     filter: grayscale(1);
     opacity: 1;
+    /* width: 100%; */
     /* animation: fadeInImage 1s ease 1s forwards; */
 }
 
 .hero-image img {
-    width: 100%;
+    /* width: 100%; */
     height: auto;
     bottom: -10%;
-    border-radius: 50%;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+    /* border-radius: 50%; */
+    /* box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8); */
     transition: transform 0.3s ease;
     position: relative;
-    width: 45vw;
-    top: 3vw;
-    margin: 3vw;
-    height: auto;
+    width: 50vw;
+    top: 2vw;
+    margin: 0vw;
+    height: 55vw;
      /* Make the image take the full height of the screen */
     object-fit: cover; /* Ensures the image covers the entire space */
     z-index: -1;
+    left: 5%;
+    
+
 }
 
 .hero-image img:hover {
@@ -273,30 +277,52 @@
 }
 @media (max-width: 1500px){
     .hero-image img{
-        width: 65vw;
+        width: 43vw;
+        height: 55vw;
+        /* border: none;
+        box-shadow: none; */
     }
     .hero-text{
-        top: -25vw;}
+        top: -10vw;}
+
 }
 @media (max-width: 1200px){
+/*     
+        .hero-content {
+       width: 100%;
+       /* top: -35vw;
+       position: relative;} */
+        
+    
     .hero-image img{
-        width: 80vw;
+        width: 90vw;
+        height: 70vw;
     }
-    .hero-text {
+    /* .hero-text {
         text-align: center;
         margin: 0;
-        top: -30vw;
+        top: -15vw;
     }
     .hero-title{
         font-size: 5vw;
     }
     .hero-subtitle{
         font-size: 2.5vw;
-        height: auto;
-        width: 70%;
-        
-    }
+        /* height: auto; }*/
 }
+@media (max-width: 970px){
+    /*     
+            .hero-content {
+           width: 100%;
+           /* top: -35vw;
+           position: relative;} */
+            
+        
+        .hero-image img{
+            width: 90vw;
+            height: 85vw;
+        }}
+
 @media (max-width: 768px) {
     .hero-content {
         flex-direction: column-reverse;
@@ -308,11 +334,12 @@
     .hero-text {
         text-align: center;
         margin: 0;
-        top: -30vw;
+        top: -10vw;
     }
     .hero-title{
         font-size: 8vw;
     }
+
     .hero-subtitle{
         font-size: 4vw;
         height: auto;
@@ -321,9 +348,9 @@
     }
 
     .hero-image img {
-        height: 120vh;
+        height: 100vh;
         object-fit: cover;
-        width: 100%;
+        width:100%;
         top: 30vw;
         margin: 0;
         padding: 0;

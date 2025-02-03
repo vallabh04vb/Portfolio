@@ -67,7 +67,17 @@
 
 .skill-grid {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  justify-items: center;
+  width: 100%;
+}
+
+/* Style for all third items in skill grids */
+.skill-grid .skill-card:nth-child(3) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 160px;
 }
 
 .skill-card {
@@ -137,49 +147,76 @@
 @media (max-width: 768px) {
   .skills {
     padding: 60px 15px;
+    text-align: center;
   }
 
   .skills h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    width: auto;
+    width: 100%;
+    text-align: center;
   }
 
   .skills-container {
     gap: 25px;
     padding: 0 10px;
+    justify-content: center;
+    align-items: center;
   }
 
   .skill-category {
-    min-width: 100%;
+    min-width: 90%;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .skill-category h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    color: #ff4c4c;
   }
 
   .skill-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    width: 100%;
+  }
+
+  .skill-grid .skill-card:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 160px;
   }
 
   .skill-card {
     padding: 15px;
+    width: 100%;
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .skill-icon {
     font-size: 1.3rem;
+    text-align: center;
   }
 
   .skill-name {
     font-size: 1rem;
     margin: 8px 0;
+    text-align: center;
+    width: 100%;
   }
 
   .skill-bar-container {
     height: 6px;
+    width: 90%;
   }
 }
 
@@ -198,12 +235,16 @@
   }
 
   .skill-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 12px;
+  }
+
+  .skill-grid .skill-card:nth-child(3) {
+    max-width: 140px;
   }
 
   .skill-card {
     padding: 12px;
+    max-width: 140px;
   }
 
   .skill-icon {
@@ -217,6 +258,13 @@
   .percentage {
     font-size: 0.7rem;
     top: -20px;
+    width: 100%;
+    text-align: center;
+    right: auto;
+  }
+
+  .skill-category {
+    min-width: 95%;
   }
 }
 
