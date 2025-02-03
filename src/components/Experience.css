@@ -141,21 +141,17 @@
   background-color: white;
   color: black;
   padding: 20px;
-  /* border-radius: 8px; */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: start !important;
-  position: relative; /* Required for pseudo-element animation */
-  padding-bottom: 50px;
+  position: relative;
   box-shadow: 0 5px 15px rgba(204, 204, 204, 0.8);
-  /* overflow: scroll; */
-  /* width: 20vw; */
-  padding-bottom: 60px;
-  /* opacity: 0.9; */
   gap: 2px;
- 
+  width: 100%;
+  max-width: 400px;
+  min-height: 350px;
 }
 
 /* Red Background Animation for Cards */
@@ -239,7 +235,8 @@
   text-align: left;
   border: 1px solid black;
   margin: 4px;
-  /* overflow: scroll; */
+  padding: 10px;
+  flex-grow: 1;
 }
 
 .experience-details ul {
@@ -255,12 +252,14 @@
 .read-more {
   background-color: white;
   align-self: flex-start;
-  align-items: self-start;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border: 1px solid #ff4c4c;
+  border-radius: 4px;
   cursor: pointer;
-
-}
-.read-more:hover{
-  background-color:#ff4c4c ;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
 
 /* Responsive Styles */
@@ -301,12 +300,23 @@
     max-width: 200px;
   }
   .experience-card {
-    width: 100%;
-    padding-bottom: 80px;
+    padding: 15px;
+    min-height: 300px;
+    width: 90%;
   }
   .company-image {
     width: 80px; /* Adjust for smaller screens */
     height: 80px;
+  }
+  .experience-details {
+    font-size: 0.9rem;
+    margin-bottom: 40px; /* Space for read more button */
+  }
+  .read-more {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    bottom: 15px;
+    left: 15px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -314,6 +324,15 @@
     width: 30%;
     padding: 15px;
     font-size: 14px;
+  }
+  .experience-card {
+    padding: 12px;
+    min-height: 280px;
+    width: 95%;
+  }
+  .experience-details {
+    font-size: 0.85rem;
+    margin-bottom: 45px;
   }
 }
 

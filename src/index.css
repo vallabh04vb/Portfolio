@@ -7,8 +7,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* Adjust this value based on your navbar height */
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 80px;
   overflow-x: hidden;
 }
 
@@ -18,6 +18,8 @@ body {
   color: #ffffff;
   line-height: 1.6;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Custom scrollbar styles */
@@ -65,4 +67,9 @@ button, a {
 * {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+}
+
+/* Smooth scroll for all elements */
+* {
+  scroll-margin-top: 80px;
 }
