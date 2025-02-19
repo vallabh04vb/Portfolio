@@ -49,6 +49,13 @@ const projects = [
     link: "https://github.com/vallabh04vb/TRAVEL-CHAT-LLM.git",
     backgroundImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3", // AI chatbot interface with travel elements
     tags: ["React", "CSS", "JavaScript"]
+  },
+  {
+    title: "AI DocTR OCR Document Scanner",
+    description: "Developed the Document Scanner using OCR and LLM, allowing users to scan documents and get the text extracted by their confidence score",
+    link: "https://github.com/vallabh04vb/DOCTR-OCR-PROJECT.git",
+    backgroundImage: "https://images.unsplash.com/photo-1618044733300-9472054094ee?ixlib=rb-4.0.3", // Document scanning and OCR concept
+    tags: ["React", "CSS", "JavaScript"]
   }
 ];
 
