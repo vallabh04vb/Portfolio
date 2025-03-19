@@ -45,6 +45,9 @@
   transform: translateX(-100%);
   animation: slideInOut 1.5s ease forwards;
   animation-play-state: var(--animation-trigger, paused); /* Default to paused */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* When the 'animated' class is added, trigger the animation */
@@ -142,7 +145,7 @@
   color: black;
   padding: 20px;
   border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -151,6 +154,8 @@
   width: 100%;
   max-width: 400px;
   min-height: 350px;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 /* Red Background Animation for Cards */
@@ -377,11 +382,10 @@
     transform: translateX(-100%);
   }
   50% {
-    transform: translateX(0); /* Fully covers the element */
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(100%); /* Slides out to the right */
-    visibility: hidden;
+    transform: translateX(100%);
   }
 }
 

@@ -9,7 +9,6 @@
 html {
   scroll-behavior: smooth !important;
   scroll-padding-top: 80px;
-  overflow-x: hidden;
 }
 
 body {
@@ -18,13 +17,13 @@ body {
   color: #ffffff;
   line-height: 1.6;
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  position: relative;
 }
 
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
   width: 8px;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-track {
@@ -63,13 +62,24 @@ button, a {
   user-select: none;
 }
 
-/* Improve animation performance */
-* {
+/* Optimize animations */
+.animated {
+  will-change: transform, opacity;
+  transform: translateZ(0);
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
 }
 
-/* Smooth scroll for all elements */
-* {
-  scroll-margin-top: 80px;
+/* Reduce animation duration for AOS */
+[data-aos] {
+  transition-duration: 600ms !important;
+}
+
+/* Disable animations on mobile for better performance */
+@media (max-width: 768px) {
+  [data-aos] {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
 }

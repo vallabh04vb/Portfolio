@@ -1,81 +1,85 @@
 // App.js
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
 import Navbar from './components/Navbar';
 import HeroBanner from './components/HeroBanner';
-import AboutMe from './components/AboutMe';
 // import Achievements from './components/Achievements';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
 // import Leadership from './components/Leadership';
-import Skills from './components/Skills';
-// import ExtraCurricular from './components/ExtraCurricular';
-import Contact from './components/Contact';
-// import Carousel from './components/Carousel';
 import { Player } from '@lottiefiles/react-lottie-player';
 import animationData from './assets/bg.json';
-import ExtraCurricular from './components/ExtraCurricular';
+
+// Lazy load components
+const AboutMe = lazy(() => import('./components/AboutMe'));
+const Experience = lazy(() => import('./components/Experience'));
+const Projects = lazy(() => import('./components/Projects'));
+const Skills = lazy(() => import('./components/Skills'));
+const ExtraCurricular = lazy(() => import('./components/ExtraCurricular'));
+const Contact = lazy(() => import('./components/Contact'));
 
 function App() {
   // const [backgroundImageUrl, setBackgroundImageUrl] = useState('');
 
   useEffect(() => {
-    AOS.init({ duration: 500, offset: 100, once: true });
+    // Optimize AOS initialization
+    AOS.init({ 
+      duration: 600,
+      offset: 100,
+      once: true,
+      disable: window.innerWidth < 768, // Disable on mobile
+      easing: 'ease-out-cubic',
+      mirror: false,
+      anchorPlacement: 'top-bottom'
+    });
 
-    // Fetch a random image from Unsplash API
-    // const fetchBackgroundImage = async () => {
-    //   try {
-    //     const response = await axios.get('https://api.unsplash.com/photos/random?query=nature&orientation=landscape', {
-    //       headers: {
-    //         Authorization: `Client-ID iWdCWewoXSDGAeRz9GfmqM94yV6kyDjaO5dZp2AULf8` // Replace with your Unsplash Access Key
-    //       }
-    //     });
+    // Debounce scroll events
+    let timeoutId;
+    const handleScroll = () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      timeoutId = setTimeout(() => {
+        AOS.refresh();
+      }, 100);
+    };
 
-    //     // Set the fetched image URL as background
-    //     setBackgroundImageUrl(response.data.urls.full);
-    //   } catch (error) {
-    //     console.error("Error fetching background image from Unsplash:", error);
-    //     setBackgroundImageUrl('https://picsum.photos/1200/800');
-    //   }
-    // };
-    // document.body.style.backgroundImage = 'url(./assets/grid.jpeg)';
-    // document.body.style.backgroundSize = 'cover';
-    // document.body.style.backgroundPosition = 'center';
-    // document.body.style.backgroundRepeat = 'no-repeat';
-
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
     return () => {
-      // Cleanup: reset background styles when component unmounts
-      document.body.style.backgroundImage = '';
+      window.removeEventListener('scroll', handleScroll);
+      AOS.refresh();
     };
   }, []);
 
   return (
     <div className="App">
-        {/* Background Lottie */}
-        <Player
+      <Player
         autoplay
         loop
-        src={animationData} // Path to your Lottie JSON file
+        src={animationData}
         className="background-lottie"
+        rendererSettings={{
+          preserveAspectRatio: 'xMidYMid slice',
+          clearCanvas: true,
+          progressiveLoad: true,
+          hideOnTransparent: true
+        }}
       />
-  <div className='content'>
-      <Navbar /> 
-      <HeroBanner />
-      <AboutMe />
-      <Experience />
-      {/* <Achievements /> */}
-      
-      <Projects />
-      {/* <Leadership /> */}
-      <Skills />
-      {/* <ExtraCurricular />
-       */}
-      
-      <ExtraCurricular/>
-      <Contact /> 
-    </div>
+      <div className='content'>
+        <Navbar />
+        <HeroBanner />
+        <Suspense fallback={<div>Loading...</div>}>
+          <AboutMe />
+          <Experience />
+          {/* <Achievements /> */}
+          <Projects />
+          {/* <Leadership /> */}
+          <Skills />
+          <ExtraCurricular />
+          <Contact />
+        </Suspense>
+      </div>
     </div>
   );
 }

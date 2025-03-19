@@ -8,7 +8,7 @@ const AboutMe = () => {
     <div id='about' className="about-me" >
       <h1>About Me</h1>
       <p>
-        Hi! I'm Vallabh Behere, a pre-final year undergraduate student at IIT Bombay,
+        Hi! I'm Vallabh Behere, a final year undergraduate student at IIT Bombay,
         passionate about technology, programming, and artificial intelligence.
         I enjoy creating projects that make a difference and learning new skills.
       </p>
