@@ -9,22 +9,26 @@
 /* Place it behind other content */
 transform: translateZ(-1px); /* Optional for a subtle depth effect */
 
-    padding: 60px 20px;
+    padding: 60px 40px;
     background-color: rgba(243, 244, 246, 1); /* Slightly transparent for layering effect */
     border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 6px 6px 12px rgba(255, 255, 255, 1);
     font-family: 'Roboto', sans-serif;
   /* Negative top margin to overlap hero section */
     position: relative;
    
-    transition: all 0.5s ease-in-out;
-    margin: 4vw !important;
-    margin-top: 0 !important;
+    transition: all 0.3s ease-in-out;
+    margin: 2rem;
+    max-width: 1200px;
+    width: calc(100% - 4rem);
+    position: relative;
+    z-index: 999 !important;
+    ;
 }
 
 .about-me h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1.5rem;
     font-family: 'Poppins', sans-serif;
     color: #1a237e;
     text-align: center;
@@ -32,11 +36,13 @@ transform: translateZ(-1px); /* Optional for a subtle depth effect */
 }
 
 .about-me p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.8;
     color: #444;
     text-align: center;
     animation: fadeIn 1.5s ease;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Fade-in animation */
@@ -49,22 +55,31 @@ transform: translateZ(-1px); /* Optional for a subtle depth effect */
     }
 }
 
-@media (min-width: 768px) {
+/* Media Queries */
+@media (min-width: 1024px) {
     .about-me {
-        margin: -100px auto -20px auto;
-        max-width: 800px;
-        
+        margin: 3rem auto;
+        padding: 80px 60px;
     }
-   
 }
-@media (max-width: 460px) {
+
+@media (max-width: 768px) {
     .about-me {
-      width: 100% !important;
-      box-shadow: inset 0 0 0 7px rgb(0, 0, 0); /* Inner border */
-      margin: 0 !important;
-      padding: 60px 2px !important;
-      border-radius: 0;
-        
+        margin: 2rem 1.5rem;
+        padding: 60px 20px;
+        width: calc(100% - 3rem);
     }
-   
+}
+
+@media (max-width: 480px) {
+    .about-me {
+        margin: 1rem;
+        padding: 80px 25px;
+        width: calc(100% - 2rem);
+        border-radius: 10px;
+    }
+    
+    .about-me h1 {
+        margin-bottom: 1rem;
+    }
 }
