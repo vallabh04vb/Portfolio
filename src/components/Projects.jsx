@@ -94,10 +94,18 @@ const Projects = () => {
           <div
             key={idx}
             className="card"
-            style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${project.backgroundImage})`,
-            }}
           >
+            <div className="card-image-wrapper">
+              {project.backgroundImage && (
+                <img
+                  src={typeof project.backgroundImage === 'string' ? project.backgroundImage : project.backgroundImage.default || project.backgroundImage}
+                  alt={project.title}
+                  className="card-image"
+                  loading="lazy"
+                />
+              )}
+              <div className="card-image-overlay"></div>
+            </div>
             <div className="card-content">
               <h3>{project.title}</h3>
               <div className="tags">
